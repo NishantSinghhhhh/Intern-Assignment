@@ -1,0 +1,20 @@
+/* Global Styles for body and all elements */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Modern, clean font for the whole application */
+  background-color: #121212; /* Dark background color for a sleek look */
+  color: #f0f0f0; /* Light text color for good contrast */
+  line-height: 1.6;
+
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+/* Basic reset for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit; /* Inherit font-family from the body */
+}

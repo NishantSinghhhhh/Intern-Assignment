@@ -1,0 +1,124 @@
+/* Container for the products */
+
+.productsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #121212; /* Dark background for the entire page */
+}
+
+/* Other styles */
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits the text to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+/* Individual product card */
+.card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 280px; /* Adjust width as needed */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for the card */
+.card:hover {
+ cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Product image */
+.productImg {
+  margin-bottom: 16px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+/* Product info section */
+.productInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title styling */
+.title {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+  color: #e0e0e0;
+}
+
+/* Description styling */
+.description {
+  font-size: 0.9em;
+  color: #b0b0b0;
+  margin: 0 0 10px 0;
+}
+
+/* Price and discount section */
+.priceDiscount {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px 0;
+}
+
+.price {
+  font-size: 1.2em;
+  color: #ff9800;
+}
+
+.discount {
+  font-size: 0.9em;
+  color: #ff5722;
+}
+
+/* Rating section */
+.rating {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.star {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.filled {
+  color: #ff9800;
+}
+
+/* Button styling */
+.button {
+  background-color: #C2B3A8;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: background-color 0.3s;
+  color: black;
+}
+
+.button:hover {
+  background-color: #C2B3A8;
+}

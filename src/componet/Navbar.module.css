@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.container {
+    font-family: "Open Sans", sans-serif;
+    min-height: 13vh;
+    /* background-color: #0C0C0C; */
+ 
+   
+}
+
+.nav {
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: fixed;
+    background-color: #0C0C0C;
+    width: 100%;
+    padding: 10px;
+}
+
+.Heading {
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.Middle ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    color: #989898;
+}
+
+.Middle li {
+    font-size: 15px;
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #989898;
+    font-weight: bolder;
+}
+
+.Cart {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartIcon {
+    width: 24px;
+    height: 24px;
+    fill: #FAF2D3; /* Adjust color as needed */
+}
+
+.itemCount {
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.itemCount{
+    color: white;
+}
