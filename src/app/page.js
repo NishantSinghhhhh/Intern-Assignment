@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { add } from '@/Redux/Cartslice';
-import Loading from './Loading'; // Import the Loading component
+import Loading from './loading'; // Import the Loading component
 import styles from './page.module.css'; // Import the CSS file for the page
 
 const Homepage = () => {
