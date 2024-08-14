@@ -1,79 +1,143 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Container styling */
 .container {
-    font-family: "Open Sans", sans-serif;
-    min-height: 13vh;
-    /* background-color: #0C0C0C; */
- 
-   
+    font-family: "Open Sans", sans-serif; /* Font for the entire container */
+    min-height: 10vh; /* Minimum height of the container */
+    background-color: #0C0C0C; /* Dark background color */
+    width: 100%; /* Full width */
+    margin: auto; /* Centered horizontally */
 }
 
+/* Navbar styling */
 .nav {
-    top: 0;
-    left: 0;
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    position: fixed;
-    background-color: #0C0C0C;
-    width: 100%;
-    padding: 10px;
+    top: 0; /* Positioned at the top */
+    left: 0; /* Aligned to the left */
+    height: 10vh; /* Height of the navbar */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between child elements */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Fixed position */
+    background-color: #0C0C0C; /* Dark background color */
+    padding: 10px; /* Padding inside the navbar */
+    margin: auto; /* Centered horizontally */
 }
 
+/* Heading styling */
 .Heading {
-    font-size: 15px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
+    font-size: 15px; /* Font size for the heading */
+    color: white; /* White text color */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-transform: capitalize; /* Capitalize text */
+    padding-left: 100px; /* Space on the left */
+}
+
+/* Middle section styling */
+.Middle {
+    flex-grow: 1; /* Allow to grow and take available space */
 }
 
 .Middle ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    color: #989898;
+    list-style: none; /* Remove list bullets */
+    display: flex; /* Flexbox layout */
+    gap: 20px; /* Space between list items */
+    padding: 0; /* Remove default padding */
+    margin: auto; /* Centered horizontally */
+    color: #989898; /* Gray color for text */
+    justify-content: center; /* Center horizontally */
 }
 
 .Middle li {
-    font-size: 15px;
-    cursor: pointer;
-    width: 10rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 15px; /* Font size for list items */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 10rem; /* Fixed width */
+    height: 3rem; /* Fixed height */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 .navLink {
-    text-decoration: none;
-    color: #989898;
-    font-weight: bolder;
+    text-decoration: none; /* Remove underline from links */
+    color: #989898; /* Gray color for links */
+    font-weight: bolder; /* Bolder font weight */
 }
 
+/* Cart styling */
 .Cart {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 24px; /* Font size for cart icon */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
 .cartIcon {
-    width: 24px;
-    height: 24px;
-    fill: #FAF2D3; /* Adjust color as needed */
+    width: 24px; /* Width of the cart icon */
+    height: 24px; /* Height of the cart icon */
+    fill: #FAF2D3; /* Color for the cart icon */
 }
 
 .itemCount {
-    font-weight: bolder;
-    margin-left: 10px;
+    font-weight: bolder; /* Bolder font weight for item count */
+    margin-left: 10px; /* Space between icon and text */
+    color: white; /* White color for item count */
 }
 
-.itemCount{
-    color: white;
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .nav {
+        width: 100%; /* Full width */
+        padding: 10px; /* Padding inside the navbar */
+        justify-content: space-between; /* Space between child elements */
+    }
+
+    .Heading {
+        font-size: 14px; /* Smaller font size for heading */
+    }
+
+    .Middle ul {
+        flex-direction: row; /* Arrange list items in a row */
+        align-items: center; /* Center items vertically */
+    }
+
+    .Middle li {
+        margin: auto; /* Center list items */
+        font-size: 14px; /* Smaller font size for list items */
+        width: auto; /* Auto width */
+        height: auto; /* Auto height */
+    }
+
+    .cartIcon {
+        width: 20px; /* Smaller width for cart icon */
+        height: 20px; /* Smaller height for cart icon */
+    }
+
+    .itemCount {
+        font-size: 14px; /* Smaller font size for item count */
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+    .Heading {
+        font-size: 12px; /* Even smaller font size for heading */
+    }
+
+    .Middle li {
+        font-size: 12px; /* Smaller font size for list items */
+    }
+
+    .cartIcon {
+        width: 18px; /* Smaller width for cart icon */
+        height: 18px; /* Smaller height for cart icon */
+    }
+
+    .itemCount {
+        font-size: 12px; /* Smaller font size for item count */
+    }
 }

@@ -1,5 +1,4 @@
 /* Container for the products */
-
 .productsWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -9,116 +8,252 @@
   background-color: #121212; /* Dark background for the entire page */
 }
 
-/* Other styles */
-
-.description {
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limits the text to 3 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-}
-
 /* Individual product card */
 .card {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  border: 1px solid #333;
-  border-radius: 8px;
+  background-color: #1e1e1e; /* Dark background for the card */
+  color: #f0f0f0; /* Light text color */
+  border: 1px solid #333; /* Border color */
+  border-radius: 8px; /* Rounded corners */
   width: 280px; /* Adjust width as needed */
-  padding: 16px;
+  padding: 16px; /* Padding inside the card */
   display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
+  flex-direction: column; /* Stack children vertically */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
 
 /* Hover effect for the card */
 .card:hover {
- cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  cursor: pointer; /* Change cursor on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhance shadow on hover */
 }
 
 /* Product image */
 .productImg {
-  margin-bottom: 16px;
+  margin-bottom: 16px; /* Space below the image */
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid #333;
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #333; /* Border around the image */
 }
 
 /* Product info section */
 .productInfo {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack children vertically */
 }
 
 /* Title styling */
 .title {
-  font-size: 1.2em;
-  margin: 0 0 10px 0;
-  color: #e0e0e0;
+  font-size: 1.2em; /* Larger font size for the title */
+  margin: 0 0 10px 0; /* Space below the title */
+  color: #e0e0e0; /* Light color for the title */
 }
 
 /* Description styling */
 .description {
-  font-size: 0.9em;
-  color: #b0b0b0;
-  margin: 0 0 10px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits the text to 3 lines */
+  -webkit-box-orient: vertical; /* Vertical text flow */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  font-size: 0.9em; /* Slightly smaller font size */
+  color: #b0b0b0; /* Gray color for description */
+  margin: 0 0 10px 0; /* Space below the description */
 }
 
 /* Price and discount section */
 .priceDiscount {
   display: flex;
-  justify-content: space-between;
-  margin: 0 0 10px 0;
+  justify-content: space-between; /* Space between price and discount */
+  margin: 0 0 10px 0; /* Space below the section */
 }
 
 .price {
-  font-size: 1.2em;
-  color: #ff9800;
+  font-size: 1.2em; /* Larger font size for price */
+  color: #ff9800; /* Orange color for price */
+}
+
+.originalPrice {
+  color: gray; /* Gray color for the original price */
+  text-decoration: line-through; /* Strike-through for original price */
+  margin-right: 8px; /* Space between original and discounted price */
+}
+
+.discountedPrice {
+  color: #ff5722; /* Red color for discounted price */
+  font-weight: bold; /* Bold font for emphasis */
 }
 
 .discount {
-  font-size: 0.9em;
-  color: #ff5722;
+  font-size: 0.9em; /* Slightly smaller font size for discount */
+  color: #ff5722; /* Red color for discount */
 }
 
 /* Rating section */
 .rating {
   display: flex;
-  align-items: center;
-  margin: 0 0 10px 0;
+  align-items: center; /* Align items vertically centered */
+  margin: 0 0 10px 0; /* Space below the rating section */
 }
 
 .star {
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1.2em; /* Larger font size for stars */
+  color: #555; /* Gray color for unfilled stars */
 }
 
 .filled {
-  color: #ff9800;
+  color: #ff9800; /* Orange color for filled stars */
 }
 
 /* Button styling */
 .button {
-  background-color: #C2B3A8;
-  border: none;
-  padding: 10px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  transition: background-color 0.3s;
-  color: black;
+  background-color: #C2B3A8; /* Light brown background for button */
+  border: none; /* Remove default border */
+  padding: 10px; /* Padding inside the button */
+  border-radius: 50px; /* Rounded button corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Font size for button text */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.1em; /* Letter spacing */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  color: black; /* Text color */
 }
 
 .button:hover {
-  background-color: #C2B3A8;
+  background-color: #a89b8e; /* Slightly darker shade on hover */
+}
+
+/* Shipping information */
+.shippingInformation {
+  margin-top: 10px; /* Space above shipping information */
+  font-size: 14px; /* Font size for shipping information */
+  color: #555; /* Gray color for text */
+}
+
+.shippingInformation p {
+  margin: 0; /* Remove default margin */
+}
+
+/* Container for the page */
+.container {
+  align-items: center; /* Center items vertically */
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Full viewport width */
+}
+
+/* Add to cart button */
+.addToCartButton {
+  background: #C2B3A8; /* Light brown background */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Slightly rounded corners */
+  box-shadow: 0 3px 13px -2px rgba(0, 0, 0, 0.15); /* Shadow effect */
+  color: #000000; /* Text color */
+  display: flex;
+  font-family: 'Ubuntu', sans-serif; /* Font family */
+  justify-content: space-between; /* Space between text and icon */
+  min-width: 195px; /* Minimum width of the button */
+  overflow: hidden; /* Hide overflowed content */
+  outline: none; /* Remove default outline */
+  padding: 1.2rem; /* Padding inside the button */
+  position: relative; /* Position for the internal elements */
+  text-transform: uppercase; /* Uppercase text */
+  transition: 0.4s ease; /* Smooth transition for button effects */
+  width: auto; /* Automatic width based on content */
+}
+
+/* Hover and active states */
+.addToCartButton:active {
+  box-shadow: 0 0 0 0.2rem #C2B3A8; /* Adjust shadow on active */
+  transform: translateY(4px); /* Move button down on active */
+  color: #ffffff; /* White text color on active */
+}
+
+.addToCartButton:hover {
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.addToCartButton:hover,
+.addToCartButton:focus {
+  box-shadow: 0 0 0 0.2rem #C2B3A8; /* Adjust shadow on hover and focus */
+  transform: translateY(-1px); /* Move button up on hover */
+}
+
+/* Animation for the button when item is added */
+.addToCartButton.added {
+  color: #ffffff; /* White text color */
+  background: #2fbf30; /* Green background when item is added */
+  box-shadow: 0 0 0 0.2rem rgba(11, 252, 3, 0.45); /* Green shadow */
+}
+
+/* Hide and show elements based on state */
+.addToCartButton.added .addToCart {
+  opacity: 0; /* Hide "Add to Cart" text */
+}
+
+.addToCartButton.added .addedToCart {
+  opacity: 1; /* Show "Added to Cart" text */
+}
+
+/* Cart icon */
+.cartIcon {
+  display: none; /* Hidden by default */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for visibility */
+  width: 15px; /* Smaller width for the cart icon */
+  height: 15px; /* Smaller height for the cart icon */
+}
+
+/* Show cart icon when button is pressed */
+.addToCartButton.added .cartIcon {
+  display: block; /* Show cart icon when item is added */
+  animation-delay: 0.1s; /* Delay for the animation */
+}
+
+/* Animation for the tick mark */
+.tick {
+  position: absolute;
+  right: 0;
+  /* bottom: 25%; */
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the tick mark */
+  opacity: 0; /* Hide by default */
+  transition: opacity 0.1s ease; /* Smooth transition for visibility */
+}
+
+.addToCartButton.added .tick {
+  opacity: 1; /* Show tick mark when item is added */
+  animation: grow 0.1s forwards; /* Grow animation */
+}
+
+@keyframes grow {
+  from {
+    /* transform: scale(0.5); Start from half scale */
+  }
+  to {
+    /* transform: scale(1); End at full scale */
+  }
+}
+
+/* Other styles */
+.addToCart,
+.addedToCart {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center positioning */
+  z-index: 1; /* Ensure it appears above other elements */
+  transition: opacity 0.2s ease; /* Smooth transition for visibility */
+}
+
+.addToCart {
+  opacity: 1; /* Show by default */
+}
+
+.addedToCart {
+  opacity: 0; /* Hide by default */
 }

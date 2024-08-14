@@ -1,14 +1,14 @@
 "use client";
-import React from 'react'
-import {Provider} from "react-redux"
+import React from 'react';
+import { Provider as ReduxProvider } from 'react-redux'; // Import Provider with a different name
 import store from './Store';
 
-const Prvider = ({children}) => {
+const AppProvider = ({ children }) => {
   return (
-    <Provider store={store}>
-        {children}
-    </Provider>
-  )
+    <ReduxProvider store={store}> {/* Use the renamed Provider here */}
+      {children}
+    </ReduxProvider>
+  );
 }
 
-export default Prvider
+export default AppProvider;

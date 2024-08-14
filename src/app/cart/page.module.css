@@ -1,104 +1,207 @@
-/* page.module.css */
-
+/* Container for the cart items */
 .cartWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .cartCard {
-    margin: auto;
-    background-color: #1E1D1D; /* Dark background for the card */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
-    padding: 20px;
-    width: 80%; /* Width of each card */
-    height: 200px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 30px;
-    color: #fff; /* Light text color for contrast */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  }
-  
-  /* .cartCard:hover {
-    transform: scale(1.02); /* Slightly enlarge the card on hover */
-    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); Darker shadow on hover */
-  /* } */
-   
-  .cartImage {
-    width: 20%;
-    height: auto;
-    overflow: hidden;
-    border-radius: 8px;
-    object-fit: cover; /* Ensures the image covers the container */
-  }
-  
-  .cartCard h5 {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 0;
-    font-size: 16px;
-    color: #fff; /* Light text color for contrast */
-  }
-  
-  .btn {
-    background-color: #C2B3A8;
-    color: #000000;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
- 
-  
-  .cartPageTitle {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 24px;
-    color: #fff; /* Light text color for contrast */
-  }
-  
-  .content {
-    width: 80%;
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-  }
-  
-  .totalCost {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 20px;
-    color: #fff; /* Light text color for contrast */
-  }
-  
-  .buttons1{
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Styles for each cart item card */
+.cartCard {
+  margin: auto;
+  background-color: #1E1D1D; /* Dark background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for card */
+  padding: 20px; /* Padding inside the card */
+  width: 80%; /* Width of each card */
+  height: 200px; /* Fixed height for the card */
+  text-align: center; /* Center text inside the card */
+  display: flex;
+  flex-direction: row; /* Arrange children in a row */
+  align-items: center; /* Align items center vertically */
+  margin-bottom: 30px; /* Space below each card */
+  color: #fff; /* Light text color for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Styles for the product image inside the card */
+.cartImage {
+  width: 20%; /* Image width relative to card width */
+  height: auto; /* Maintain aspect ratio */
+  overflow: hidden; /* Hide overflow content */
+  border-radius: 8px; /* Rounded corners for the image */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Styles for the title inside the card */
+.cartCard h5 {
+  width: 40%; /* Width of title section relative to card */
+  display: flex;
+  flex-direction: column; /* Arrange title and price in a column */
+  justify-content: space-between; /* Space between title and price */
+  margin: 10px 0; /* Margin around title */
+  font-size: 16px; /* Font size for the title */
+  color: #fff; /* Light text color for contrast */
+}
+
+/* Container for price details */
+.priceContainer {
+  display: flex;
+  flex-direction: column; /* Arrange price elements in a column */
+  align-items: center; /* Center align price elements */
+}
+
+/* Original price with strikethrough effect */
+.originalPrice {
+  text-decoration: line-through; /* Strikethrough effect for original price */
+  color: gray; /* Gray color for original price */
+}
+
+/* Discounted price with bold green color */
+.discountedPrice {
+  color: green; /* Green color for discounted price */
+  font-weight: bold; /* Bold font for emphasis */
+  margin-top: 5px; /* Space above the discounted price */
+}
+
+/* Discount label with bold red color */
+.discount {
+  color: red; /* Red color for discount percentage */
+  font-weight: bold; /* Bold font for emphasis */
+  margin-top: 5px; /* Space above the discount label */
+}
+
+/* Button styles */
 .btn {
-    /* background-color: #ff6f61; */
-    color: #000000;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #C2B3A8; /* Background color for buttons */
+  color: #000000; /* Text color for buttons */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners for buttons */
+  padding: 10px 20px; /* Padding inside buttons */
+  font-size: 12px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color change */
 }
 
+/* Title for the cart page */
+.cartPageTitle {
+  text-align: center; /* Center align title text */
+  margin: 20px 0; /* Margin above and below the title */
+  font-size: 24px; /* Font size for the title */
+  color: #fff; /* Light text color for contrast */
+}
+
+/* Container for content inside the card */
+.content {
+  width: 80%; /* Width of content section relative to card */
+  display: flex;
+  width: 100%; /* Full width of content section */
+  justify-content: space-evenly; /* Evenly space content items */
+}
+
+/* Container for total cost section */
+.totalCost {
+  text-align: center; /* Center align total cost text */
+  margin: 20px 0; /* Margin above and below total cost */
+  font-size: 20px; /* Font size for total cost */
+  color: #fff; /* Light text color for contrast */
+}
+
+/* Container for buttons inside the card */
+.buttons1 {
+  width: 100%; /* Full width of button container */
+  display: flex;
+  flex-direction: row; /* Arrange buttons in a row */
+  justify-content: space-evenly; /* Evenly space buttons */
+}
+
+/* Container for individual buttons inside the card */
+.buttons {
+  display: flex;
+  align-items: center; /* Center align buttons vertically */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Style for individual buttons */
+.btn {
+  color: #000000; /* Text color for buttons */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners for buttons */
+  padding: 5px 10px; /* Padding inside buttons */
+  font-size: 18px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+/* Container for cart summary */
+.cartSummary {
+  padding: 16px; /* Padding inside the summary container */
+  margin-top: 20px; /* Margin above the summary container */
+  background-color: #121212; /* Dark background for the summary */
+}
+
+/* Title in the cart summary */
+.cartSummary h4 {
+  margin: 0 0 10px 0; /* Margin below the title */
+  font-size: 1.2rem; /* Font size for the title */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Paragraph text in the cart summary */
+.cartSummary p {
+  margin: 5px 0; /* Margin around paragraph text */
+}
+
+/* Container for discount input fields */
+.discountInputs {
+  margin: 10px 0; /* Margin around discount input fields */
+}
+
+/* Style for discount input labels */
+.discountInputs label {
+  display: block; /* Block display for labels */
+  margin-bottom: 10px; /* Margin below labels */
+}
+
+/* Style for discount input fields */
+.discountInputs input {
+  margin-left: 10px; /* Space between label and input */
+  width: 100px; /* Fixed width for input fields */
+  padding: 5px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Border color for input fields */
+  border-radius: 4px; /* Rounded corners for input fields */
+}
+
+/* Container for price details section */
+.priceDetails {
+  background-color: #1E1D1D; /* Dark background for price details */
+  color: #fff; /* Light text color for contrast */
+  border-radius: 8px; /* Rounded corners for section */
+  padding: 20px; /* Padding inside the section */
+  margin: 20px auto; /* Margin above and below section, centered */
+  width: 80%; /* Width of the section */
+  text-align: center; /* Center align text */
+}
+
+/* Style for price details table */
+.priceTable {
+  width: 100%; /* Full width of the table */
+  border-collapse: collapse; /* Collapse table borders */
+  margin-top: 10px; /* Margin above the table */
+}
+
+/* Style for table cells in price details */
+.priceTable td {
+  padding: 10px; /* Padding inside table cells */
+  border: 1px solid #333; /* Border color for table cells */
+}
+
+/* Style for the last row of the table */
+.priceTable tr:last-child td {
+  border-bottom: 2px solid #fff; /* Bottom border for the last row */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
